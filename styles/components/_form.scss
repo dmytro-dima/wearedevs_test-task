@@ -1,0 +1,48 @@
+@import 'variables';
+.form{
+  background: #FBFBFB 0% 0% no-repeat padding-box;
+  box-shadow: 10px 10px 20px #131819AD;
+  width: 510px;
+  height: 140px;
+  display: flex;
+  position: relative;
+  padding: 15px;
+  top: 200px;
+  right: 200px;
+  z-index: 10;
+  &-close{
+    position: absolute;
+    background: $yellow-color 0% 0% no-repeat padding-box;
+    right: 0px;
+    top: 0px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  &-month, &-day{
+    margin: 5px;
+    &_title{
+      text-align: left;
+      font: normal normal medium 20px/56px Rubik;
+      letter-spacing: -0.4px;
+      color: #A2A2A2;
+      opacity: 1;
+    }
+    &_input{
+      font-size: 25px;
+      padding: 5px;
+      width: 220px;
+      height: 54px;
+      box-shadow: 0px 0px 25px #0000000D;
+      border: 2px solid $yellow-color;
+    }
+  }
+}
+
+.eclipse-background{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  top: 0;
+}

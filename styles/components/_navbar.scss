@@ -1,0 +1,141 @@
+@import 'variables';
+
+.navbar{
+  width: 100%;
+  height: 150px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  display: flex;
+  justify-content: space-between;
+  color: $primary-text-color;
+  font-weight: bold;
+  &-logo{
+    margin: auto 0 auto 78px;
+    display: flex;
+    &_left{
+      background-color: $yellow-color;
+      position: absolute;
+      top: 50px;
+      left: 110px;
+      width: 34px;
+      height: 50px;
+      &__text{
+        padding: 0;
+        margin: auto;
+        height: 20px;
+        font-weight: bold;
+        font-size: 25px;
+        text-align: center;
+      }
+    }
+    &_right{
+      position: absolute;
+      top: 12px;
+      left: 148px;
+      width: 33px;
+      height: 53px;
+      font-size: 30px;
+
+      span{
+        font-size: 68px;
+      }
+    }
+  }
+  &-links{
+    margin: auto 110px auto 0px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &_link {
+      &.active{
+        position: relative;
+        span {
+          width: 14px;
+          height: 14px;
+          background: #FDD000 0% 0% no-repeat padding-box;
+          border-radius: 10px;
+          position: absolute;
+          top: 40px;
+          left: 30px;
+        }
+      }
+      &.active:last-child{
+        span {
+          left: 55px;
+        }
+      }
+    }
+
+    &_link:first-child {
+      margin-right: 70px;
+    }
+
+    a{
+      color: $primary-text-color;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 25px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .navbar {
+    &-logo {
+      &_left {
+        left: 10px;
+      }
+      &_right {
+        left: 45px;
+      }
+    }
+    &-links {
+      margin: auto 0px;
+      display: flex;
+      flex-direction: column;
+      &_link {
+        &.active {
+          span {
+            top: 4px;
+            left: -25px;
+          }
+        }
+        &.active:last-child{
+          span {
+            top: 4px;
+            left: -25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    &-links {
+      margin: auto 0px;
+      height: 60px;
+      &_link {
+        margin-right: 0px!important;
+
+        a{
+          font-size: 20px;
+          margin: 6px;
+        }
+        &.active {
+          span {
+            top: 4px;
+            left: -15px;
+          }
+        }
+        &.active:last-child{
+          span {
+            top: 4px;
+            left: -15px;
+          }
+        }
+      }
+    }
+  }
+}

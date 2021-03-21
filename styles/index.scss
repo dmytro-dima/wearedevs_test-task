@@ -1,0 +1,21 @@
+@import 'components/_navbar';
+@import 'components/_home';
+@import 'components/_about';
+@import 'components/_form';
+@import 'components/_calendar';
+
+* {
+  box-sizing: content-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Rubik', sans-serif;
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+}

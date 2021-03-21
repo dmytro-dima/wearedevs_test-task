@@ -1,0 +1,23 @@
+@import 'variables';
+.about{
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+  color: $primary-text-color;
+
+  &-title{
+    font: normal normal bold 34px/100px Rubik;
+    letter-spacing: -0.68px;
+    line-height: 50px;
+  }
+
+  &-text{
+    margin-top: 78px;
+    letter-spacing: 0.4px;
+    color: #3D3D3D;
+    font: normal normal 300 20px/36px Rubik;
+    p {
+      text-indent: 25px;
+    }
+  }
+}
