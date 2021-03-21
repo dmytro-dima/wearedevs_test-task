@@ -1,16 +1,12 @@
 import Link from "next/link";
 import React, { useState, useEffect } from 'react';
 
-export const MainLayout = ({children}) =>{
+export const Navbar = ({children}) =>{
   const [activePage, setActivePage] = useState('home')
-  const setLActivePage = (type) => {
-    localStorage.setItem('activePage', type);
-  }
 
-  useEffect(()=>{
-    setActivePage(localStorage.getItem("activePage"))
-  },[activePage])
+  const setLActivePage = (type) => localStorage.setItem('activePage', type);
 
+  useEffect(()=> setActivePage(localStorage.getItem("activePage")),[activePage])
 
   const activeClass = type => activePage === type ? 'navbar-links_link active' : 'navbar-links_link'
 

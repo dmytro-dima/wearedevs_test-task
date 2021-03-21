@@ -1,8 +1,9 @@
 @import 'variables';
 .home{
   background: transparent url('../../images/Artboard.png') 0% 0% no-repeat padding-box;
-  height: 100vh;
+  height: 80vh;
   display: flex;
+  overflow: hidden;
   &-text{
     width: 70%;
     text-align: right;
@@ -18,7 +19,7 @@
     }
     &_subtitle{
       letter-spacing: 0.6px;
-      color: #DFDFDF;
+      color: $gray-color;
       font-size: 30px;
       width: 520px;
       margin: 45px 30px 0px auto;
@@ -46,7 +47,6 @@
       }
     }
     &-calendar{
-      background: #272829 0% 0% no-repeat padding-box;
       width: 50%;
     }
   }

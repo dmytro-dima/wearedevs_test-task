@@ -5,10 +5,10 @@
   width: 510px;
   height: 140px;
   display: flex;
-  position: relative;
+  position: absolute;
   padding: 15px;
-  top: 200px;
-  right: 200px;
+  top: 30%;
+  right: 30%;
   z-index: 10;
   &-close{
     position: absolute;
@@ -19,7 +19,8 @@
     cursor: pointer;
   }
   &-month, &-day{
-    margin: 5px;
+    margin: 10px;
+    width: calc(50% - 10px);
     &_title{
       text-align: left;
       font: normal normal medium 20px/56px Rubik;
@@ -46,3 +47,34 @@
   opacity: 0.5;
   top: 0;
 }
+
+@media (max-width: 1024px) {
+  .form{
+    top: 40%;
+    right: 25%;
+  }
+}
+@media (max-width: 768px) {
+  .form{
+    right: 15%;
+  }
+}
+@media (max-width: 425px) {
+  .form{
+    width: 90%;
+    left: 7px;
+    &-month, &-day{
+      margin: 5px;
+      &_input{
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .form{
+    left: 4px;
+  }
+}
+

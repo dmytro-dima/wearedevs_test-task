@@ -1,0 +1,89 @@
+@import 'variables';
+.home-calendar{
+  width: 30%;
+  padding-top: 50px;
+  .container{
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .calendar-month{
+    display: flex;
+    width: 90%;
+    margin: 5px auto;
+    padding-bottom: 20px;
+
+    &_switch{
+      color: $gray-color;
+      opacity: 0.67;
+      cursor: pointer;
+      &:hover{
+        color: $white-color;
+      }
+    }
+
+    &_text{
+      text-align: center;
+      font: normal normal medium 19px/23px Rubik;
+      letter-spacing: 0px;
+      color: #DFDFDF;
+      text-transform: uppercase;
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  .calendar-content{
+    &_days,  &_week {
+      width: 100%;
+      font-size: 14px;
+      border-top: 1px solid $gray-color;
+      text-align: center;
+    }
+
+   &_days{
+     &__day{
+       font: normal normal medium 16px/19px Rubik;
+       letter-spacing: 0px;
+       color: $white-color;
+       td{
+         padding: 10px 0;
+         textAlign: center;
+         cursor: pointer;
+       }
+       .n-current{
+         color: $gray-color;
+         opacity: 0.24;
+       }
+       .active{
+         background: #FDD000 0% 0% no-repeat padding-box;
+         box-shadow: 0px 0px 25px #0000000D;
+         letter-spacing: 0px;
+         color: #3D3D3D;
+       }
+     }
+   }
+    &_week{
+      color: $white-color;
+      border-bottom: 1px solid $gray-color;
+      &__day{
+        td{
+          padding: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .home-calendar{
+    width: 50%;
+  }
+}
+
+@media (max-width: 425px) {
+  .home-calendar{
+    width: 100%;
+    padding-top: 20px;
+  }
+}
